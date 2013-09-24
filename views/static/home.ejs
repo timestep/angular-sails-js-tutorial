@@ -1,0 +1,22 @@
+<div class="container" >
+	<div class="row">Name <br>
+	 <input type="text" ng-model="name"/> {{name}}
+	</div>
+	
+	<div class="row" data-ng-init="names=['Dave','Pan','Jesus']">
+		<h3>Looping with ng-repeat Directive</h3>
+		<ul>
+			<li data-ng-repeat="personName in names">{{personName}}</li>
+		</ul>
+	</div>
+
+	<div class="row" data-ng-controller="SimpleController">
+		<h3>Looping with ng-repeat and filters</h3>
+		<ul>
+			<li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">{{cust.name}} - {{cust.city}}</li>
+		</ul>
+	</div>
+
+</div>
+
+
